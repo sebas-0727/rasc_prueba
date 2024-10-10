@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Avistadores</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+body {
+    background-color: #e6f4ea;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 1rem; /* Agrega un poco de espacio interno */
+}
+
+.form-control-lg {
+    font-size: 1.25rem;
+    padding: .75rem 1.25rem;
+    border-radius: .3rem;
+    width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    display: flex; /* Usa flexbox para una mejor disposición */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+@media (max-width: 768px) {
+    .form-control-lg {
+        font-size: 1rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .form-row {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-control-lg {
+        padding: .5rem 1rem; /* Reduce el padding para pantallas muy pequeñas */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Gestión de Avistadores</h1>
+        
+        <h2>Registrar Avistador</h2>
+        <form id="registroForm" class="mb-4 form-container">
+            <div class="row g-3">
+                <div class="col-md-4 form-row">
+                    <input type="text" class="form-control form-control-lg" id="nombres" placeholder="Nombre Completo" required>
+                </div>
+                <div class="col-md-4 form-row">
+                    <input type="text" class="form-control form-control-lg" id="ficha" placeholder="Ficha" pattern="\d{7}" maxlength="7" title="Ingrese exactamente 7 números" required>
+                </div>
+                <div class="col-md-4 form-row">
+                    <input type="email" class="form-control form-control-lg" id="correo" placeholder="Correo" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success" href="/reporte">Registrar Avistador</button>
+            <a href="/reporta" class="btn btn-danger btn-block">regresar</a>
+        </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="/static/js/avistador.js"></script>
+
+</body>
+</html>

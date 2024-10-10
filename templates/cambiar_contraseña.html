@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #e6f4ea;
+            display: flex;
+            margin: 0%;
+            padding: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Cambiar Contraseña</h1>
+        <form id="cambiarContraseñaForm">
+            <div class="form-group">
+                <label for="correoActualizar">Correo:</label>
+                <input type="email" id="correoActualizar" class="form-control" name="correoActualizar" required>
+            </div>
+            <div class="form-group">
+                <label for="nuevaContraseña">Nueva Contraseña:</label>
+                <input type="text" id="nuevaContraseña" class="form-control" name="nuevaContraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Actualizar Contraseña</button>
+        </form>
+        <div id="resultado" class="mt-3"></div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/js/cambia_contraseña.js"></script>
+
+</body>
+</html>
